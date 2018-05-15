@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+
+    android:layout_marginTop="12dp"
+    >
+
+    <ImageView
+        android:id="@+id/popular_recycler_iv"
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lawncare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="#77000000"
+        app:layout_constraintBottom_toBottomOf="@+id/popular_recycler_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/popular_recycler_item_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="Lawncare"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/location_primary_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dhaka"/>
+
+    <TextView
+        android:id="@+id/location_secondary_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dhaka"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F46133"/>
+
+</LinearLayout>

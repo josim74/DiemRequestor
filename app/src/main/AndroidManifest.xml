@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.biswajitbanik.Diem.RequestorActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.biswajitbanik.Diem.PagerActivity" />
         <activity
@@ -24,11 +20,18 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-       <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyAuHdQJOZkFEeyBUuaYF6P7b1ksCsd7rC0" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAuHdQJOZkFEeyBUuaYF6P7b1ksCsd7rC0" />
 
-        <activity android:name="com.biswajitbanik.Diem.Location.ViewModel.LocationPickerActivity"></activity>
+        <activity android:name="com.biswajitbanik.Diem.Location.ViewModel.LocationPickerActivity" />
+        <activity android:name="com.biswajitbanik.Diem.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

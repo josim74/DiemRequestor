@@ -2,6 +2,7 @@ package com.biswajitbanik.Diem;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.biswajitbanik.Diem.HomeCategory.ViewModel.CategoryFragment;
@@ -18,37 +22,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 //MainActivity
-public class RequestorActivity extends AppCompatActivity {
+public class RequestorActivity extends Fragment {
 
-    public static final String PREF_USER_FIRST_TIME = "user_first_time";
+
     boolean isUserFirstTime;
     ImageView headerImg;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        //If the app is fresh, this will be true and will start an intent to PagerActivity
+        View view = inflater.inflate(R.layout.activity_homepage,container,false);
 
-        //isUserFirstTime = Boolean.valueOf(Utils.readSharedSetting(RequestorActivity.this, PREF_USER_FIRST_TIME, "true"));
-        isUserFirstTime = Boolean.valueOf(Utils.readSharedSetting(RequestorActivity.this, PREF_USER_FIRST_TIME, "true"));
+//        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+//   ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+//
+//
+//        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null)
+//            ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        Intent intent = new Intent(RequestorActivity.this, IntroActivity.class);
-        intent.putExtra(PREF_USER_FIRST_TIME, isUserFirstTime);
-
-        if (isUserFirstTime) {
-            startActivity(intent);
-        }
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        if(getSupportActionBar() != null)
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
 
         CategoryFragment fragment = new CategoryFragment();
         fragment.initFragment(0);
@@ -88,10 +82,10 @@ public class RequestorActivity extends AppCompatActivity {
 
         viewPager.setAdapter(adapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        headerImg = findViewById(R.id.background);
+        headerImg = view.findViewById(R.id.background);
 
         final int[] imgIDs = {R.drawable.header1, R.drawable.header2, R.drawable.header3, R.drawable.header4,
                 R.drawable.header5, R.drawable.header1, R.drawable.header1, R.drawable.header1, R.drawable.header1};
@@ -116,7 +110,11 @@ public class RequestorActivity extends AppCompatActivity {
 
             }
         });
+
+        return view;
     }
+
+
 
     // Adapter for the viewpager using FragmentPagerAdapter
     class ViewPagerAdapter extends FragmentPagerAdapter {

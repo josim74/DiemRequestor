@@ -21,17 +21,37 @@ public class PopularDBHandler {
     private List<CategoryModel> generateDummyModels() {
         List<CategoryModel> categoryModels =new ArrayList<>();
 
+
+
+
+
         CategoryModel model = new CategoryModel(R.drawable.lawncare,"Lawncare");
         categoryModels.add(model);
 
-         model = new CategoryModel(R.drawable.snow_removal,"Snow Removal");
+        model = new CategoryModel(R.drawable.snow_removal,"Snow Removal");
         categoryModels.add(model);
+
+        model = new CategoryModel(R.drawable.repair,"Home & Reno Repair");
+
         categoryModels.add(model);
+        model = new CategoryModel(R.drawable.housecleaning,"House Cleaning");
+
         categoryModels.add(model);
+        model = new CategoryModel(R.drawable.moving,"Moving");
+
         categoryModels.add(model);
+        model = new CategoryModel(R.drawable.vacumming,"Vacumming");
+
         categoryModels.add(model);
+        model = new CategoryModel(R.drawable.painting,"Painting");
+
         categoryModels.add(model);
+        model = new CategoryModel(R.drawable.carrepair,"Car Repair");
+
         categoryModels.add(model);
+
+
+
 
 
 

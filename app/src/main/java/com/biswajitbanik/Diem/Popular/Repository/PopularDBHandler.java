@@ -24,13 +24,26 @@ public class PopularDBHandler {
         PopularModel model = new PopularModel(R.drawable.lawncare,"Lawncare");
         popularModels.add(model);
 
-         model = new PopularModel(R.drawable.snow_removal,"Snow Removal");
+        model = new PopularModel(R.drawable.snow_removal,"Snow Removal");
         popularModels.add(model);
+
+        model = new PopularModel(R.drawable.repair,"Home & Reno Repair");
+
         popularModels.add(model);
+        model = new PopularModel(R.drawable.housecleaning,"House Cleaning");
+
         popularModels.add(model);
+        model = new PopularModel(R.drawable.moving,"Moving");
+
         popularModels.add(model);
+        model = new PopularModel(R.drawable.vacumming,"Vacumming");
+
         popularModels.add(model);
+        model = new PopularModel(R.drawable.painting,"Painting");
+
         popularModels.add(model);
+        model = new PopularModel(R.drawable.carrepair,"Car Repair");
+
         popularModels.add(model);
 
 

@@ -11,9 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 
-import com.biswajitbanik.Diem.Popular.ViewModel.PopularFragment;
+import com.biswajitbanik.Diem.HomeCategory.ViewModel.CategoryFragment;
 import com.codility.introsilder.R;
-import com.biswajitbanik.Diem.fragments.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,15 +50,41 @@ public class RequestorActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new PopularFragment(), "Popular");
-        adapter.addFragment(new Fragment2(), "Outdoor");
-        adapter.addFragment(new Fragment3(), "Handy & Skilled");
-        adapter.addFragment(new Fragment4(), "Cleaning");
-        adapter.addFragment(new Fragment5(), "Technology");
-        adapter.addFragment(new Fragment6(), "Automobile");
-        adapter.addFragment(new Fragment7(), "Food & Event");
-        adapter.addFragment(new Fragment8(), "Beauty & Lifestyle");
-        adapter.addFragment(new Fragment9(), "Education & Business");
+        CategoryFragment fragment = new CategoryFragment();
+        fragment.initFragment(0);
+        adapter.addFragment( fragment, "Popular");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(1);
+        adapter.addFragment(fragment, "Outdoor");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(2);
+        adapter.addFragment(fragment, "Handy & Skilled");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(3);
+        adapter.addFragment(fragment, "Cleaning");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(4);
+        adapter.addFragment(fragment, "Technology");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(5);
+        adapter.addFragment(fragment, "Automobile");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(6);
+        adapter.addFragment(fragment, "Food & Event");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(7);
+        adapter.addFragment(fragment, "Beauty & Lifestyle");
+
+        fragment = new CategoryFragment();
+        fragment.initFragment(8);
+        adapter.addFragment(fragment, "Education & Business");
 
         viewPager.setAdapter(adapter);
 

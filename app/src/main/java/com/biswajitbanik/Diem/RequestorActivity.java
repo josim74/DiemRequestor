@@ -88,7 +88,7 @@ public class RequestorActivity extends Fragment {
         headerImg = view.findViewById(R.id.background);
 
         final int[] imgIDs = {R.drawable.header1, R.drawable.header2, R.drawable.header3, R.drawable.header4,
-                R.drawable.header5, R.drawable.header1, R.drawable.header1, R.drawable.header1, R.drawable.header1};
+                R.drawable.header5, R.drawable.header6, R.drawable.header7, R.drawable.header7, R.drawable.header7};
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -99,9 +99,9 @@ public class RequestorActivity extends Fragment {
             @Override
             public void onPageSelected(int position) {
 
-                if(position > 4)
-                    headerImg.setImageResource(R.drawable.header1);
-                else
+//                if(position > 4)
+//                    headerImg.setImageResource(R.drawable.header1);
+//                else
                     headerImg.setImageResource(imgIDs[position]);
             }
 

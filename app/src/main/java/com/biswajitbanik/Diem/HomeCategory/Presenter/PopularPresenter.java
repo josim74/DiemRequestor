@@ -38,12 +38,34 @@ public class PopularPresenter {
             case 1:
                 loadOutdoorList();
                 break;
+            case 2:
+                loadHandyandSkilled();
+                break;
+            case 3:
+                loadCleaning();
+                break;
+            case 4:
+                loadTechnology();
+                break;
+            case 5:
+                loadAutomobile();
+                break;
+            case 6 :
+                loadFoodandEvent();
+                break;
+            case 7:
+                loadBeautyandLifestyle();
+                break;
+            case 8:
+                loadEducation();
+                break;
+
         }
 
     }
 
-    private void loadOutdoorList() {
-        mDBhandler.getOutdoorList(new PopularDBCallback() {
+    private void loadEducation() {
+        mDBhandler.getEducationandbusinessList(new PopularDBCallback() {
             @Override
             public void getPopularList(List<CategoryModel> categoryModels) {
                 mCategoryModels = categoryModels;
@@ -55,10 +77,106 @@ public class PopularPresenter {
 
             }
         });
-
     }
 
+    private void loadBeautyandLifestyle() {
+        mDBhandler.getBeautyandlifestyleList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
 
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+
+            }
+        });
+    }
+
+    private void loadFoodandEvent() {
+        mDBhandler.getFoodandEventList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
+
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+
+            }
+        });
+    }
+
+    private void loadAutomobile() {
+        mDBhandler.getAutomobileList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
+
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+
+            }
+        });
+    }
+
+    private void loadTechnology() {
+        mDBhandler.getTechnologyList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
+
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+
+            }
+        });
+    }
+
+    private void loadCleaning() {
+        mDBhandler.getCleaningList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+
+            }
+        });
+    }
+
+    private void loadHandyandSkilled() {
+        mDBhandler.getHandlyandSkilledList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+            }
+        });
+    }
+    private void loadOutdoorList() {
+        mDBhandler.getOutdoorList(new PopularDBCallback() {
+            @Override
+            public void getPopularList(List<CategoryModel> categoryModels) {
+                mCategoryModels = categoryModels;
+                mViewModel.showPopularModels();
+            }
+            @Override
+            public void getRecentJob(List<RecentJobModel> recentJobModels) {
+            }
+        });
+    }
     private void loadPopularList() {
         mDBhandler.getPopularModelList(new PopularDBCallback() {
             @Override

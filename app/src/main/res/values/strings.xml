@@ -18,5 +18,8 @@
     <string name="location_title_1">Please enter your postal code </string>
     <string name="location_dec_2">We just want to know your approximate location in order to show you content tailored to you and serve you better </string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

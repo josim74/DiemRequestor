@@ -24,4 +24,6 @@ public interface LocationViewModel {
     void openHomeActivity();
 
     void hideKeypad();
+
+    String getSearchText();
 }

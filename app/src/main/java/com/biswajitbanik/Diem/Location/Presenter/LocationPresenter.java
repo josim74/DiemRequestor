@@ -104,6 +104,9 @@ public class LocationPresenter {
     }
 
     public void onSearchBtnClick() {
+
+        if(mViewModel.getSearchText().isEmpty())
+            return;
         if(!mViewModel.getSearchBtnText().equals("Confirm")){
 
             mDBHandler.getLatLongFromPlaceId(mSelectedPrediction.getPlaceId(), new LocationCallBack() {

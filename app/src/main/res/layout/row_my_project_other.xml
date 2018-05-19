@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="10dp"
+
+    >
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/my_project_iv"
+            android:layout_width="106dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="#F46133"
+            android:orientation="vertical"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lawncare">
+
+
+            <TextView
+                android:id="@+id/subject_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text="Completed on"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/day_of_month_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:textSize="23dp"
+                android:text="26"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/month_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="37dp"
+                android:textSize="19dp"
+
+                android:text="Jan"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/day_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:text="Wed"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/my_project_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato"
+            android:text="1000 sf yard needs mowing preferably this Sunday"
+            android:textColor="#2D3B41"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_project_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/my_project_type_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lato"
+            android:text="LAWNCARE GARDENING"
+            android:textAlignment="viewStart"
+            android:textColor="#607D8B"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_project_iv"
+            app:layout_constraintTop_toBottomOf="@+id/my_project_title_tv" />
+
+        <TextView
+            android:id="@+id/offer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="27dp"
+            android:text="Assigned 20 mins ago"
+            app:layout_constraintStart_toEndOf="@+id/my_project_iv"
+            app:layout_constraintTop_toBottomOf="@+id/my_project_type_tv" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:text="$20"
+            android:textAlignment="textEnd"
+            android:textColor="#506976"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_project_type_tv" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="#000000"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_project_iv"
+            app:layout_constraintTop_toBottomOf="@+id/price_tv" />
+
+        <TextView
+            android:id="@+id/view_detalies_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/lato"
+            android:text="VIEW DETAILS"
+            android:textColor="#F46133"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

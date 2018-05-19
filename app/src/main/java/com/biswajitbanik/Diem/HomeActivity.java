@@ -8,8 +8,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
+import com.biswajitbanik.Diem.MyProject.ViewModel.MyProjectContainerFragment;
+import com.biswajitbanik.Diem.Util.BottomNavigationViewHelper;
 import com.codility.introsilder.R;
 import com.codility.introsilder.databinding.ActivityHomeBinding;
 
@@ -42,9 +45,20 @@ public class HomeActivity extends AppCompatActivity {
                     .commit();
         }
 
+
+
+        BottomNavigationViewHelper.disableShiftMode(mBinding.bottomNavigation);
         mBinding.bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
+                Menu menu = mBinding.bottomNavigation.getMenu();
+                menu.findItem(R.id.home_menu_item).setIcon(R.drawable.home_unselected);
+                menu.findItem(R.id.project_menu_item).setIcon(R.drawable.project_unselected);
+                menu.findItem(R.id.message_menu_item).setIcon(R.drawable.message_unselected);
+                menu.findItem(R.id.notification_menu_item).setIcon(R.drawable.notification_unselected);
+                menu.findItem(R.id.setting_menu_item).setIcon(R.drawable.settings_unselected);
 
 
 
@@ -52,22 +66,35 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.home_menu_item:
                         fragment = new RequestorActivity();
+                        item.setIcon(R.drawable.home_selected);
                         break;
-
-
+                    case R.id.project_menu_item:
+                        fragment = new MyProjectContainerFragment();
+                        item.setIcon(R.drawable.project_selected);
+                        break;
+                    case R.id.message_menu_item:
+                        item.setIcon(R.drawable.message_selected);
+                        break;
+                    case R.id.notification_menu_item:
+                        item.setIcon(R.drawable.notification_selected);
+                        break;
+                    case R.id.setting_menu_item:
+                        item.setIcon(R.drawable.settings_selected);
+                        break;
                 }
                 if (fragment!=null)
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container,fragment)
-                        .addToBackStack(null)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                        .commit();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container,fragment)
+                            .addToBackStack(null)
+                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                            .commit();
 
 
 
                 return true;
             }
         });
+
 
 
 

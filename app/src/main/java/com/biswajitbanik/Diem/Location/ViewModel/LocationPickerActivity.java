@@ -137,6 +137,11 @@ public class LocationPickerActivity extends AppCompatActivity implements Locatio
                 mBinding.searchBtn.getWindowToken(), 0);
     }
 
+    @Override
+    public String getSearchText() {
+        return mBinding.locationSearchEt.getText().toString();
+    }
+
 
     public Bitmap resizeMapIcons(String iconName, int width, int height){
         Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));

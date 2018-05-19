@@ -2,31 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home_menu_item"
-        android:icon="@drawable/bottom_nav_setting"
+        android:icon="@drawable/home_unselected"
         android:title="" />
 
 
     <item
         android:id="@+id/project_menu_item"
-        android:icon="@drawable/bottom_nav_setting"
+        android:icon="@drawable/project_unselected"
 
         android:title="" />
 
     <item
         android:id="@+id/message_menu_item"
-        android:icon="@drawable/bottom_nav_setting"
+        android:icon="@drawable/message_unselected"
 
         android:title="" />
 
     <item
         android:id="@+id/notification_menu_item"
-        android:icon="@drawable/bottom_nav_setting"
+        android:icon="@drawable/notification_unselected"
 
         android:title="" />
 
     <item
         android:id="@+id/setting_menu_item"
-        android:icon="@drawable/bottom_nav_setting"
+        android:icon="@drawable/settings_unselected"
 
         android:title="" />
 

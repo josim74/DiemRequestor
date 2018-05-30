@@ -6,4 +6,5 @@ package com.biswajitbanik.Diem.MyProject.ViewModel;
 
 public interface MyProjectViewModel {
 
+    void showList();
 }

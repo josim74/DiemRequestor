@@ -11,10 +11,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.biswajitbanik.Diem.Message.ViewModel.MessageFragment;
 import com.biswajitbanik.Diem.MyProject.ViewModel.MyProjectContainerFragment;
+import com.biswajitbanik.Diem.Notification.ViewModel.NotificationFragment;
+import com.biswajitbanik.Diem.Setting.ViewModel.SettingsFragment;
 import com.biswajitbanik.Diem.Util.BottomNavigationViewHelper;
-import com.codility.introsilder.R;
-import com.codility.introsilder.databinding.ActivityHomeBinding;
+import com.biswajitbanik.Diem.R;
+import com.biswajitbanik.Diem.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
     public static final String PREF_USER_FIRST_TIME = "user_first_time";
@@ -73,12 +76,15 @@ public class HomeActivity extends AppCompatActivity {
                         item.setIcon(R.drawable.project_selected);
                         break;
                     case R.id.message_menu_item:
+                        fragment = new MessageFragment();
                         item.setIcon(R.drawable.message_selected);
                         break;
                     case R.id.notification_menu_item:
+                        fragment = new NotificationFragment();
                         item.setIcon(R.drawable.notification_selected);
                         break;
                     case R.id.setting_menu_item:
+                        fragment = new SettingsFragment();
                         item.setIcon(R.drawable.settings_selected);
                         break;
                 }

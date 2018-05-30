@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.VideoView;
 
-import com.codility.introsilder.R;
+import com.biswajitbanik.Diem.R;
 
 
 public class IntroActivity extends AppCompatActivity {

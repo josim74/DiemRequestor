@@ -72,7 +72,8 @@
         android:id="@+id/offer_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:text="3 offers"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -97,11 +98,11 @@
         android:layout_height="1dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="16dp"
         android:background="#6b000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/my_project_iv" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -118,6 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="16dp"
 
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/lato"

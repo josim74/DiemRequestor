@@ -37,48 +37,54 @@
                 android:id="@+id/subject_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:gravity="center"
-
+                android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:textSize="12sp"
-                android:text="Completed on"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+
+                android:gravity="bottom"
+                android:text="Complete On"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:fontFamily="@font/raleway_semibold" />
 
             <TextView
                 android:id="@+id/day_of_month_tv"
-                android:layout_width="wrap_content"
+                android:layout_width="49dp"
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="40dp"
                 android:layout_marginEnd="40dp"
-                android:textSize="23dp"
+                android:layout_marginStart="40dp"
                 android:text="26"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="23dp"
+                android:typeface="monospace"
+                app:fontFamily="@font/raleway_semibold" />
 
             <TextView
                 android:id="@+id/month_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_marginStart="37dp"
                 android:layout_marginEnd="37dp"
-                android:textSize="19dp"
-
+                android:layout_marginStart="37dp"
                 android:text="Jan"
-                android:textColor="#FFFFFF" />
+
+                android:textColor="#FFFFFF"
+                android:textSize="19dp" />
+
             <TextView
                 android:id="@+id/day_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="12sp"
-                android:layout_marginStart="40dp"
                 android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_weight="1"
                 android:text="Wed"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -143,11 +149,11 @@
             android:layout_height="1dp"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
-            android:background="#000000"
             android:layout_marginTop="8dp"
+            android:background="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/my_project_iv"
-            app:layout_constraintTop_toBottomOf="@+id/price_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/offer_tv" />
 
         <TextView
             android:id="@+id/view_detalies_tv"

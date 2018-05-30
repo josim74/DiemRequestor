@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.biswajitbanik.Diem.HomeCategory.ViewModel.CategoryFragment;
-import com.codility.introsilder.R;
+import com.biswajitbanik.Diem.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.biswajitbanik.Diem.HomeCategory.Repository;
 
-import com.codility.introsilder.R;
+import com.biswajitbanik.Diem.R;
 
 import java.util.ArrayList;
 import java.util.List;

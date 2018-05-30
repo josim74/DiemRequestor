@@ -241,4 +241,8 @@ public class PopularPresenter {
     public String getRecentJobTime(int position) {
         return mRecentJobList.get(position).getmTime();
     }
+
+    public void categoryItemClick(int layoutPosition) {
+        mViewModel.openTaskActivity();
+    }
 }

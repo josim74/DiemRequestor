@@ -1,0 +1,153 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.biswajitbanik.Diem.Task.ViewModel.TaskTextFragment">
+
+            <TextView
+                android:id="@+id/task_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textColor="#F36133"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/second_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Please enter your job address so that we can connect you to jobbers nearby"
+                android:textAlignment="viewStart"
+                android:textColor="#2D3A41"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/example_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Only the jobber that you finally pick would be able to see your address details."
+                android:textColor="#2D3A41"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:id="@+id/location_layout"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="38dp"
+                android:background="@drawable/orange_border_btn"
+
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/task_location_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="9dp"
+                    android:text="Get my location"
+                    android:textAllCaps="true"
+                    android:textColor="#F36133"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp">
+
+                <EditText
+                    android:id="@+id/street_address_one_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street address 1" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/street_address_two_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street address 2" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+
+                    android:id="@+id/postal_code_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Postal code" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <fragment
+                android:visibility="gone"
+                android:id="@+id/map_container"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+
+                android:layout_height="290dp"
+                android:layout_marginTop="11dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location_search_et" />
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="120dp"
+                android:layout_height="58dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="54dp"
+
+                android:layout_marginTop="26dp"
+                android:background="@drawable/btn_background"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:textSize="19dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codility.introsilder">
+    package="com.biswajitbanik.Diem">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.biswajitbanik.Diem.RequestorActivity">
-
-        </activity>
-        <activity android:name="com.biswajitbanik.Diem.PagerActivity" />
+        <activity android:name=".RequestorActivity" />
+        <activity android:name=".PagerActivity" />
         <activity
-            android:name="com.biswajitbanik.Diem.IntroActivity"
+            android:name=".IntroActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <meta-data
@@ -23,16 +26,30 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAuHdQJOZkFEeyBUuaYF6P7b1ksCsd7rC0" />
+            android:value="AIzaSyCLE-HDIeN_B5AxW9hXaHMZf1ug4A3cN7o" />
 
-        <activity android:name="com.biswajitbanik.Diem.Location.ViewModel.LocationPickerActivity" />
-        <activity android:name="com.biswajitbanik.Diem.HomeActivity">
+        <activity android:name=".Location.ViewModel.LocationPickerActivity" />
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Task.ViewModel.TaskActivity" />
+        <activity android:name=".LogOutActivity" />
+        <activity android:name=".ContactUsActivity" />
+        <activity android:name=".Task.ViewModel.TaskFlowActivity" />
+        <activity android:name=".PaymentMethodActivity" />
+        <activity android:name=".Personal_informationActivity" />
+        <activity android:name=".Change_passwordActivity" />
+        <activity android:name=".Change_mobileNumberActivity" />
+        <activity android:name=".MyAccountActivity" />
+        <activity android:name=".MyAboutusActivity" />
+        <activity android:name=".Paymeny_HistoryActivity" />
+        <activity android:name=".Task.ViewModel.TaskPicActivity" />
+        <activity android:name=".Task.ViewModel.TaskBudgetActivity" />
+        <activity android:name=".Task.ViewModel.RequestSummaryActivity"></activity>
     </application>
 
 </manifest>

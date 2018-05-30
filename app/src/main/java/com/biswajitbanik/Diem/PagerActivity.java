@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.biswajitbanik.Diem.Location.ViewModel.LocationPickerActivity;
-import com.codility.introsilder.R;
+import com.biswajitbanik.Diem.R;
 
 public class PagerActivity extends AppCompatActivity {
 

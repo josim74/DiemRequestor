@@ -1,0 +1,58 @@
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.biswajitbanik.Diem.Task.ViewModel.TaskTextFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/task_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Title:"
+        android:textColor="#F36133"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:id="@+id/second_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Please tell us briefly what you need done"
+        android:textAlignment="viewStart"
+        android:textColor="#2D3A41"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+    <TextView
+
+        android:id="@+id/example_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="e.g. Dog sitter needer for 3 hours."
+        android:layout_marginTop="22dp"
+        android:textColor="#2D3A41"
+        android:textSize="13sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_input_et"
+       />
+
+    <TextView
+        android:id="@+id/input_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50/50"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="end"
+        android:textColor="#506876"
+        android:textSize="12dp"/>
+
+
+</LinearLayout>
+</layout>

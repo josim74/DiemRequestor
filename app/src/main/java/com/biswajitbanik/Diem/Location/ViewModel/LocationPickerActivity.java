@@ -20,8 +20,8 @@ import android.widget.TextView;
 
 import com.biswajitbanik.Diem.Location.Presenter.LocationPresenter;
 import com.biswajitbanik.Diem.Location.Repository.LocationDBHandler;
-import com.codility.introsilder.R;
-import com.codility.introsilder.databinding.ActivityMainBinding;
+import com.biswajitbanik.Diem.R;
+import com.biswajitbanik.Diem.databinding.ActivityMainBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

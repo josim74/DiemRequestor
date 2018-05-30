@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+    android:layout_marginLeft="14dp"
+    android:layout_marginBottom="14dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/gallary_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/white_bg_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/pic_photo_number_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/gallary_iv"
+        app:layout_constraintEnd_toEndOf="@+id/gallary_iv"
+        app:layout_constraintStart_toStartOf="@+id/gallary_iv"
+        app:layout_constraintTop_toTopOf="@+id/gallary_iv" />
+
+    <TextView
+        android:id="@+id/pic_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="16sp"
+        android:textColor="#506876"
+        app:layout_constraintTop_toTopOf="@+id/white_bg_iv"
+        app:layout_constraintBottom_toBottomOf="@+id/white_bg_iv"
+        app:layout_constraintStart_toStartOf="@+id/white_bg_iv"
+        app:layout_constraintEnd_toEndOf="@id/white_bg_iv"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
+
+
+

@@ -1,5 +1,6 @@
 package com.biswajitbanik.Diem.HomeCategory.ViewModel;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,8 +16,9 @@ import android.widget.TextView;
 
 import com.biswajitbanik.Diem.HomeCategory.Presenter.PopularPresenter;
 import com.biswajitbanik.Diem.HomeCategory.Repository.PopularDBHandler;
-import com.codility.introsilder.R;
-import com.codility.introsilder.databinding.Fragment1Binding;
+import com.biswajitbanik.Diem.Task.ViewModel.TaskActivity;
+import com.biswajitbanik.Diem.R;
+import com.biswajitbanik.Diem.databinding.Fragment1Binding;
 
 public class CategoryFragment extends Fragment implements PopularViewModel {
 
@@ -66,6 +68,12 @@ public class CategoryFragment extends Fragment implements PopularViewModel {
                 true));
     }
 
+    @Override
+    public void openTaskActivity() {
+
+        startActivity(new Intent(getActivity(),TaskActivity.class));
+    }
+
 
     public class PopularViewHolder extends RecyclerView.ViewHolder {
         private ImageView popularItemIV;
@@ -76,6 +84,13 @@ public class CategoryFragment extends Fragment implements PopularViewModel {
             super(itemView);
             popularItemIV = itemView.findViewById(R.id.popular_recycler_iv);
             popularItemNameTV= itemView.findViewById(R.id.popular_recycler_item_name_tv);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mPresenter.categoryItemClick(getLayoutPosition());
+                }
+            });
         }
 
 

@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.codility.introsilder.R;
-import com.codility.introsilder.databinding.FragmentMyProjectBinding;
+import com.biswajitbanik.Diem.R;
+import com.biswajitbanik.Diem.databinding.FragmentMyProjectBinding;
 
 
 /**
@@ -31,10 +31,9 @@ public class MyProjectContainerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_my_project, container, false);
-
-        
-
-
+        MyProjectStatePagerAdapter adapter = new MyProjectStatePagerAdapter(getChildFragmentManager());
+        mBinding.viewpager.setAdapter(adapter);
+        mBinding.tablayout.setupWithViewPager(mBinding.viewpager);
 
         return mBinding.getRoot();
     }
@@ -50,12 +49,32 @@ public class MyProjectContainerFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            return null;
+           MyProjectFragment fragment = new MyProjectFragment();
+           fragment.initFragment(position);
+
+            return fragment;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+
+            switch (position){
+                case 0:
+                    return  "OPEN";
+                case 1:
+                    return   "ASSIGNED";
+                case 2:
+                    return "COMPLETED";
+               default:
+                    return  "UNFULFILLED";
+            }
+
+
         }
 
         @Override
         public int getCount() {
-            return 0;
+            return 4;
         }
     }
 

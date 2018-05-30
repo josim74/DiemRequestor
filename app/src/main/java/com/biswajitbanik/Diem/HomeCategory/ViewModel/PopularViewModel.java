@@ -10,4 +10,6 @@ public interface PopularViewModel  {
     void showPopularModels();
 
     void showRecentJobs();
+
+    void openTaskActivity();
 }

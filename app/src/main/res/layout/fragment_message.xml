@@ -1,0 +1,66 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.biswajitbanik.Diem.MyProject.ViewModel.MyProjectFragment">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#f36133">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="Message"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp" />
+                <ImageButton
+                    android:id="@+id/new_message_IB"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edit"
+
+                    />
+
+                <ImageButton
+                    android:id="@+id/refresh_IB"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/refresh"
+
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+       <android.support.v7.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/messageRecyclerView">
+
+       </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+    </LinearLayout>
+
+</layout>

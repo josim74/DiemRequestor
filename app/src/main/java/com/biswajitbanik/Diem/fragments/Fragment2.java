@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.codility.introsilder.R;
+import com.biswajitbanik.Diem.R;
+
 
 /**
  * Created by Anu on 22/04/17.

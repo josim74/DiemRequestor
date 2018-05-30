@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="37dp"
+            tools:context="com.biswajitbanik.Diem.HomeCategory.ViewModel.TaskActivity">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:background="#F36133"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <ImageButton
+                        android:id="@+id/close_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:background="@drawable/close" />
+
+                    <TextView
+                        android:id="@+id/terms_title_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Terms of Use"
+                        android:textColor="#FFFFFF"
+                        android:textSize="23sp" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="356dp"
+                android:layout_height="651dp"
+
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet sagittis id consectetur purus ut faucibus. Sed augue lacus viverra vitae congue eu. Laoreet id donec ultrices tincidunt arcu non sodales. Elementum facilisis leo vel fringilla est ullamcorper eget. Sed odio morbi quis commodo. Molestie at elementum eu facilisis sed odio morbi quis. Tellus in hac habitasse platea dictumst. Dolor purus non enim praesent elementum facilisis leo vel. Ornare aenean euismod elementum nisi quis. Id venenatis a condimentum vitae sapien pellentesque. At auctor urna nunc id. Donec adipiscing tristique risus nec. Odio ut enim blandit volutpat maecenas volutpat. In iaculis nunc sed augue lacus viverra vitae. Enim eu turpis egestas pretium. Tellus mauris a diam maecenas sed enim ut sem. Elit ut aliquam purus sit amet luctus venenatis lectus. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. Placerat orci nulla pellentesque dignissim. Nibh tortor id aliquet lectus. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Netus et malesuada fames ac turpis. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Faucibus turpis in eu mi. Dolor magna eget est lorem ipsum dolor. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Morbi tempus iaculis urna id volutpat lacus laoreet non. Auctor augue mauris augue neque gravida in fermentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Pellentesque sit amet porttitor eget dolor. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Id velit ut tortor pretium viverra suspendisse. Pulvinar mattis nunc sed blandit libero volutpat. In nibh mauris cursus mattis molestie a iaculis. Id diam maecenas ultricies mi. Tristique senectus et netus et malesuada fames ac. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Donec adipiscing tristique risus nec feugiat in. In fermentum posuere urna nec. Tristique et egestas quis ipsum. Facilisis volutpat est velit egestas dui id ornare arcu odio. Venenatis tellus in metus vulputate. Urna cursus eget nunc scelerisque viverra mauris in. Et leo duis ut diam quam nulla porttitor massa. Morbi tristique senectus et netus et malesuada fames ac. Mattis enim ut tellus elementum sagittis vitae et leo duis. Sit amet purus gravida quis. Facilisi morbi tempus iaculis urna. Blandit volutpat maecenas volutpat blandit aliquam. Amet purus gravida quis blandit. Fermentum dui faucibus in ornare quam. Urna duis convallis convallis tellus id interdum velit laoreet id. In pellentesque massa placerat duis ultricies lacus sed turpis."
+                android:textColor="#607D8B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>
+

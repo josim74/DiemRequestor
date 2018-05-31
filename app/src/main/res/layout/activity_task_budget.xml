@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:progressBackgroundTint="#F36133"
+            android:max="6"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageButton
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/close_black" />
+
+
+        <!--<android.support.v4.view.ViewPager-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginEnd="24dp"-->
+        <!--android:layout_marginStart="24dp"-->
+        <!--android:layout_marginTop="22dp" />-->
+        <TextView
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="22dp"
+            android:id="@+id/task_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Budget:"
+            android:textColor="#F36133"
+            android:textSize="17dp"
+            />
+
+        <TextView
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:id="@+id/second_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="What is your budget for this job?"
+            android:textAlignment="viewStart"
+            android:textColor="#2D3A41"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/budget_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="24dp"
+            android:textSize="32sp"
+            android:textColor="#506876"
+            android:inputType="number"
+            android:text="$"/>
+
+        <TextView
+            android:id="@+id/error_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minimum acceptable budget is $15"
+            android:textColor="#D93645"
+            android:textSize="11sp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <Button
+
+            android:id="@+id/next_btn"
+            android:layout_width="120dp"
+            android:layout_height="58dp"
+            android:text="Next"
+            android:textSize="19dp"
+            android:background="@drawable/btn_background"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="end"
+            android:layout_marginBottom="26dp"
+            android:layout_marginEnd="24dp"
+
+            />
+
+
+    </LinearLayout>
+</layout>

@@ -1,6 +1,7 @@
 package com.biswajitbanik.Diem.MyProject.ViewModel;
 
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -68,6 +69,15 @@ public class MyProjectFragment extends Fragment implements MyProjectViewModel {
             priceTv = itemView.findViewById(R.id.price_tv);
             postedTimeTv = itemView.findViewById(R.id.postedtime_tv);
             viewDetailTV = itemView.findViewById(R.id.view_detalies_tv);
+            viewDetailTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mIndex==0)
+                    startActivity(new Intent(getActivity(),OpenDetailActivity.class));
+                    else
+                        startActivity(new Intent(getActivity(),MyProjectOtherDetailActivity.class));
+                }
+            });
         }
     }
 

@@ -1,5 +1,6 @@
 package com.biswajitbanik.Diem.Task.ViewModel;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.databinding.DataBindingUtil;
 import android.support.v4.content.ContextCompat;
@@ -44,6 +45,13 @@ public class TaskBudgetActivity extends AppCompatActivity implements TaskBudgetV
 
         mBinding.budgetEt.setSelection(1);
 
+        mBinding.nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.onNextBtnClick();
+            }
+        });
+
     }
 
     @Override
@@ -64,5 +72,11 @@ public class TaskBudgetActivity extends AppCompatActivity implements TaskBudgetV
     public void setETText(String msg) {
         mBinding.budgetEt.setText(msg);
         mBinding.budgetEt.setSelection(msg.length());
+    }
+
+    @Override
+    public void openSummaryActivity() {
+        finish();
+        startActivity(new Intent(this,RequestSummaryActivity.class));
     }
 }

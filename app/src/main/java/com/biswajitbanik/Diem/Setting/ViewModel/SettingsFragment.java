@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.biswajitbanik.Diem.ContactUsActivity;
+import com.biswajitbanik.Diem.Faq.FaqActivity;
 import com.biswajitbanik.Diem.LogOutActivity;
 import com.biswajitbanik.Diem.MyAboutusActivity;
 import com.biswajitbanik.Diem.MyAccountActivity;
@@ -98,6 +99,8 @@ public class SettingsFragment extends Fragment{
                         startActivity(new Intent(getActivity(), MyAboutusActivity.class));
                     } else if (text.equals("Payment History")){
                         startActivity(new Intent(getActivity(), Paymeny_HistoryActivity.class));
+                    }else if (text.equals("FAQ")){
+                        startActivity(new Intent(getActivity(), FaqActivity.class));
                     }
 
                 }

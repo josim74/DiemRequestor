@@ -26,7 +26,14 @@ public class TaskBudgetPresenter {
             mViewModel.showErrorMsg();
         }else {
             mViewModel.removeErrorMsg();
+            mBudget = budget;
         }
 
+    }
+
+    public void onNextBtnClick() {
+        if (mBudget>0){
+            mViewModel.openSummaryActivity();
+        }
     }
 }

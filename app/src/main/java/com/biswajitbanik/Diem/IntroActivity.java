@@ -11,11 +11,12 @@ import android.widget.Button;
 import android.widget.VideoView;
 
 import com.biswajitbanik.Diem.R;
+import com.biswajitbanik.Diem.Util.TextureVideoView;
 
 
 public class IntroActivity extends AppCompatActivity {
 
-    VideoView mVideoView;
+    TextureVideoView mVideoView;
 
     Button exploreBtn;
     @Override
@@ -36,17 +37,21 @@ public class IntroActivity extends AppCompatActivity {
             }
         });
 
-        mVideoView = (VideoView) findViewById(R.id.mgvideoView);
+        mVideoView = (TextureVideoView) findViewById(R.id.mgvideoView);
+        mVideoView.setScaleType(TextureVideoView.ScaleType.CENTER_CROP);
 
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shortversion);
-        mVideoView.setVideoURI(uri);
-        mVideoView.start();
+        mVideoView.setDataSource(this,uri);
+        //mVideoView.setVideoURI(uri);
 
-        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                mediaPlayer.setLooping(true);
-            }
-        });
+        mVideoView.setLooping(true);
+        mVideoView.play();
+
+//        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mediaPlayer) {
+//                mediaPlayer.setLooping(true);
+//            }
+//        });
     }
 }

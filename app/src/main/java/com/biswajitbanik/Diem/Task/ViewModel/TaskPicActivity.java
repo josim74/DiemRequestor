@@ -144,7 +144,13 @@ public class TaskPicActivity extends AppCompatActivity implements TaskPicViewMod
 
     @Override
     public void exit() {
+        setResult(RESULT_OK);
         finish();
+    }
+
+    @Override
+    public void hidePhotoPickButton() {
+        mBinding.attachCircleImageview.setVisibility(View.GONE);
     }
 
 

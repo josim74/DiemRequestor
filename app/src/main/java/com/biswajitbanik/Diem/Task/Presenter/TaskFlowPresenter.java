@@ -85,4 +85,8 @@ public class TaskFlowPresenter {
             mViewModel.setNextButtonVisibility(View.VISIBLE);
         }
     }
+
+    public void successfullyCompleted() {
+        mViewModel.returnSuccessfullyCompleted();
+    }
 }

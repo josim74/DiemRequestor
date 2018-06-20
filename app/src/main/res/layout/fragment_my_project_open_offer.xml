@@ -1,0 +1,52 @@
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.biswajitbanik.Diem.MyProject.ViewModel.MyProjectOpenOfferFragment">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/open_offer_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cancel_cv"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Task"
+                android:textColor="#2D3A41"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="14dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

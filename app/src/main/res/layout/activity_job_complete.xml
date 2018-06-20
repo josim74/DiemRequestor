@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<android.support.constraint.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F36133">
+
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="47dp"
+        android:text="Mark job complete?"
+        android:textColor="#F4F4F4"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="17dp"
+        android:text="You are about to mark this Job complete. This would send an instant payment to jobber. Are you sure about this?"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginRight="137dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/warning" />
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Allow Jobber to call me by phone"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:textSize="16sp"-->
+    <!--tools:layout_editor_absoluteX="21dp"-->
+    <!--tools:layout_editor_absoluteY="370dp" />-->
+
+
+    <Button
+        android:id="@+id/job_complete_btn"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/white_border_btn"
+        android:text="Confirm job Completion"
+        android:textColor="#F4F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+</layout>

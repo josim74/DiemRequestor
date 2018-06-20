@@ -12,4 +12,6 @@ public interface TaskPicViewModel {
     void enableNextButton();
 
     void exit();
+
+    void hidePhotoPickButton();
 }

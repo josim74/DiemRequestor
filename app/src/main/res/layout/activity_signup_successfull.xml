@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<android.support.constraint.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F36133">
+
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="175dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="47dp"
+        android:text="Verification successful!"
+        android:textColor="#F4F4F4"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="17dp"
+        android:text="Congrats on becoming a new Diemer! Diem proudly welcomes you as a new member of our community of Requestors and Jobbers!
+
+
+
+
+
+
+"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginRight="137dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/request_image" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/white_border_btn"
+        android:text="Login and Continue"
+        android:textColor="#F4F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>

@@ -109,9 +109,11 @@ public class MyProjectPreseneter {
 
     public int getItemViewType() {
 
-        if (mIndex == 0)
-            return 0;
-        else return 1;
+//        if (mIndex == 0)
+//            return 0;
+//        else return 1;
+
+        return 0 ;
     }
 
     public String getTitle(int position) {

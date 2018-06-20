@@ -49,7 +49,27 @@
         <activity android:name=".Paymeny_HistoryActivity" />
         <activity android:name=".Task.ViewModel.TaskPicActivity" />
         <activity android:name=".Task.ViewModel.TaskBudgetActivity" />
-        <activity android:name=".Task.ViewModel.RequestSummaryActivity"></activity>
+        <activity android:name=".Task.ViewModel.RequestSummaryActivity" />
+        <activity android:name=".Task.ViewModel.RequestPostedActivity" />
+        <activity android:name=".BecomeJobberActivity" />
+        <activity android:name=".RecentCompletedJobs.ViewModel.RecentCompletedJobsActivity" />
+        <activity android:name=".MyProject.ViewModel.OpenDetailActivity" />
+        <activity android:name=".MyProject.ViewModel.MyProjectOtherDetailActivity" />
+        <activity android:name=".MyProject.ViewModel.JobberOfferDetailActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MyProject.ViewModel.PaymentMethodActivity" />
+        <activity android:name=".MyProject.ViewModel.FeeDetailsActivity" />
+        <activity android:name=".MyProject.ViewModel.JobSuccessfullyScheduleMessageActivity" />
+        <activity android:name=".VerifyAccountActivity" />
+        <activity android:name=".SignupSuccessfullActivity" />
+        <activity android:name=".JobCompleteActivity" />
+        <activity android:name=".JobberProfileActivity" />
+        <activity android:name=".ConfirmJobCompleteActivity" />
+        <activity android:name=".CancelJobActivity" />
+        <activity android:name=".PopularRequestActivity" />
+        <activity android:name=".ThanksFeedbackActivity"></activity>
+        <activity android:name=".Faq.FaqActivity"></activity>
     </application>
 
 </manifest>

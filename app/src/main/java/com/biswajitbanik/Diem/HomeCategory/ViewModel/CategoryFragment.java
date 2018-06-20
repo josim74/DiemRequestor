@@ -14,8 +14,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.biswajitbanik.Diem.BecomeJobberActivity;
 import com.biswajitbanik.Diem.HomeCategory.Presenter.PopularPresenter;
 import com.biswajitbanik.Diem.HomeCategory.Repository.PopularDBHandler;
+import com.biswajitbanik.Diem.PopularRequestActivity;
+import com.biswajitbanik.Diem.RecentCompletedJobs.ViewModel.RecentCompletedJobsActivity;
 import com.biswajitbanik.Diem.Task.ViewModel.TaskActivity;
 import com.biswajitbanik.Diem.R;
 import com.biswajitbanik.Diem.databinding.Fragment1Binding;
@@ -44,8 +47,21 @@ public class CategoryFragment extends Fragment implements PopularViewModel {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_1, container, false);
+        mBinding.moreTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PopularRequestActivity.class));
+            }
+        });
         mPresenter = new PopularPresenter(this, new PopularDBHandler(),mCategoryIndex);
 
+
+        mBinding.becomeJobberImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BecomeJobberActivity.class));
+            }
+        });
 
 
 
@@ -132,6 +148,13 @@ public class CategoryFragment extends Fragment implements PopularViewModel {
              timeTv=itemView.findViewById(R.id.time_tv);
 
              imageView = itemView.findViewById(R.id.recent_job_image_view);
+
+             itemView.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     startActivity(new Intent(getActivity(), RecentCompletedJobsActivity.class));
+                 }
+             });
          }
 
 

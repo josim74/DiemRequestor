@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F36133">
+
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="253dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="85dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="47dp"
+        android:text="Request Posted!"
+        android:textColor="#F4F4F4"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="34dp"
+        android:text="Well done! Please allow some time for jobbers in your area to assess your request and offer quotes.
+To view and manage your offers go to ‘My Projects’ section of the app
+"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginRight="137dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/request_image" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/white_border_btn"
+        android:text="My Assigned Projects"
+        android:textColor="#F4F4F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+</android.support.constraint.ConstraintLayout>

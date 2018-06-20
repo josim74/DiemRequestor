@@ -1,5 +1,6 @@
 package com.biswajitbanik.Diem.Task.ViewModel;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,7 +15,7 @@ import com.biswajitbanik.Diem.Task.Repository.QuestionDBHandler;
 import com.biswajitbanik.Diem.R;
 import com.biswajitbanik.Diem.databinding.ActivityTaskFlowBinding;
 
-public class TaskFlowActivity extends AppCompatActivity implements TaskFlowViewModel {
+public class TaskFlowActivity extends AppCompatActivity implements TaskFlowViewModel , TaskLocationFragment.LocationFragmentCallback {
 
     private ActivityTaskFlowBinding mBinding;
     private TaskFlowPresenter mPresenter;
@@ -57,6 +58,18 @@ public class TaskFlowActivity extends AppCompatActivity implements TaskFlowViewM
     @Override
     public void setNextButtonVisibility(int visibility) {
         mBinding.nextBtn.setVisibility(visibility);
+    }
+
+    @Override
+    public void returnSuccessfullyCompleted() {
+        Intent returnIntent = new Intent();
+        setResult(RESULT_OK,returnIntent);
+        finish();
+    }
+
+    @Override
+    public void onSuccessfulComplete() {
+        mPresenter.successfullyCompleted();
     }
 
 

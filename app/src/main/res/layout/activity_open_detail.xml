@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        tools:context="com.biswajitbanik.Diem.MyProject.ViewModel.OpenDetailActivity">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#F36133"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/edit_image_view"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginTop="11dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/edit_pencil" />
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lawncare"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/detail_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="1000 sf yard needs mowing preferably this sunday"
+                    android:textColor="#2D3A41"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_image_view"
+                    app:layout_constraintStart_toEndOf="@+id/imageview"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="25 mins ago  "
+                    android:textColor="#506876"
+                    app:layout_constraintBottom_toBottomOf="@+id/budget_tv"
+                    app:layout_constraintStart_toEndOf="@+id/imageview"
+                    app:layout_constraintTop_toTopOf="@+id/budget_tv" />
+
+                <TextView
+                    android:id="@+id/budget_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="13dp"
+                    android:text="Budget $20"
+                    android:textColor="#506876"
+                    android:textSize="19dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:background="@drawable/offers_selected"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:id="@+id/offer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:textSize="13dp"
+            android:layout_marginTop="24dp"
+            android:text="View Offer"
+            app:layout_constraintEnd_toStartOf="@+id/task_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <Button
+            android:background="@drawable/task_unselected"
+            android:textColor="#F36133"
+            android:textAllCaps="false"
+            android:id="@+id/task_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginTop="24dp"
+            android:textSize="13dp"
+            android:text="Manage Task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/offer_btn"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/offer_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="27dp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

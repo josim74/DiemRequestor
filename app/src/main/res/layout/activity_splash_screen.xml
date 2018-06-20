@@ -17,14 +17,15 @@
         android:layout_marginRight="32dp"
         android:background="@android:color/transparent"
         android:fontFamily="sans-serif-condensed"
-        android:text="Explore  >"
+        android:text="Get Started >"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:typeface="serif"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <VideoView
+    <com.biswajitbanik.Diem.Util.TextureVideoView
         android:id="@+id/mgvideoView"
         android:layout_width="0dp"
         android:layout_height="0dp"

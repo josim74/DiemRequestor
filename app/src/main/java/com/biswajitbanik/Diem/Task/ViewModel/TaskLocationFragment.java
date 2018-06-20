@@ -3,6 +3,7 @@ package com.biswajitbanik.Diem.Task.ViewModel;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
@@ -27,8 +28,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
+
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceLikelihood;
 import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
@@ -60,12 +60,14 @@ public class TaskLocationFragment extends Fragment {
     private SupportMapFragment mMapFramgent;
     private int GOOGLE_API_CLIENT_ID = 0;
     private GoogleApiClient mGoogleApiClient;
-    private FusedLocationProviderClient mFusedLocationClient;
+
 
     private Place mPlace;
     private String mName, mAddress;
 
     private SupportMapFragment mMapFragment;
+
+    private LocationFragmentCallback mCallback;
 
     public TaskLocationFragment() {
         // Required empty public constructor
@@ -103,7 +105,7 @@ public class TaskLocationFragment extends Fragment {
 
         mMapFramgent = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_container);
 
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(getActivity());
+
 
 
         mLocationManager = (LocationManager) getActivity().getSystemService(LOCATION_SERVICE);
@@ -119,19 +121,6 @@ public class TaskLocationFragment extends Fragment {
                 })
                 .build();
 
-        if (ContextCompat.checkSelfPermission(getActivity(),
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(getActivity(),
-                Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(),
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
-                            Manifest.permission.ACCESS_COARSE_LOCATION},
-                    MY_PERMISSIONS_REQUEST_LOCATION);
-
-        } else {
-            callPlaceDetectionApi();
-        }
 
         mMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map_container);
 
@@ -143,10 +132,31 @@ public class TaskLocationFragment extends Fragment {
             public void onClick(View v) {
 //               getChildFragmentManager().beginTransaction().show(mMapFragment).commit();
                 mMapFragment.getView().setVisibility(View.VISIBLE);
-                if (mPlace !=null){
+                if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.ACCESS_FINE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.ACCESS_COARSE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                                    Manifest.permission.ACCESS_COARSE_LOCATION},
+                            MY_PERMISSIONS_REQUEST_LOCATION);
+
+                } else {
+                    callPlaceDetectionApi();
+                }
+
+                /*if (mPlace !=null){
                     mBinding.streetAddressOneEt.setText(mName);
                     mBinding.streetAddressTwoEt.setText(mAddress);
-                }
+                }*/
+            }
+        });
+
+        mBinding.nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.onSuccessfulComplete();
             }
         });
 
@@ -170,7 +180,7 @@ public class TaskLocationFragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-    @SuppressLint("MissingPermission")
+   /* @SuppressLint("MissingPermission")
     private void getCurrentLocation() {
         mFusedLocationClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
@@ -178,7 +188,7 @@ public class TaskLocationFragment extends Fragment {
                 drawMap(location.getLatitude(), location.getLongitude());
             }
         });
-    }
+    }*/
 
 
     public void drawMap(final double latitude, final double longitude) {
@@ -235,8 +245,10 @@ public class TaskLocationFragment extends Fragment {
                 mPlace = maxPlaceLikeLihood.getPlace();
                 drawMap(maxPlaceLikeLihood.getPlace().getLatLng().latitude, maxPlaceLikeLihood.getPlace().getLatLng().longitude);
 
-                mName = mPlace.getName().toString();
-                mAddress = mPlace.getAddress().toString();
+//                mName = mPlace.getName().toString();
+//                mAddress = mPlace.getAddress().toString();
+                mBinding.streetAddressOneEt.setText(mPlace.getName().toString());
+                mBinding.streetAddressTwoEt.setText(mPlace.getAddress().toString());
 
                 likelyPlaces.release();
             }
@@ -247,6 +259,16 @@ public class TaskLocationFragment extends Fragment {
         Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), getResources().getIdentifier(iconName, "drawable", getActivity().getPackageName()));
         return Bitmap.createScaledBitmap(imageBitmap, width, height,
                 false);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mCallback = (LocationFragmentCallback) context;
+    }
+
+    public interface LocationFragmentCallback{
+        public void onSuccessfulComplete();
     }
 
 

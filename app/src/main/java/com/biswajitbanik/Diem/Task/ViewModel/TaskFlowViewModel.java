@@ -9,4 +9,6 @@ import android.support.v4.app.Fragment;
 public interface TaskFlowViewModel {
 
     void setNextButtonVisibility(int visibility);
+
+    void returnSuccessfullyCompleted();
 }

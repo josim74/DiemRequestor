@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="18dp"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="14dp"
+       >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_circle_image_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Bruce Harrington  "
+            android:textColor="#2D3A41"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/price_tv"
+            app:layout_constraintStart_toEndOf="@+id/profile_circle_image_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/offer_state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Offered different"
+            android:textColor="#F36133"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/profile_circle_image_view"
+
+            app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+        <TextView
+            android:id="@+id/complete_job_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="7 Completed Jobs  "
+            android:textColor="#484848"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/profile_circle_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/offer_state_tv" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="$25 "
+            android:textColor="#506876"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/lato"
+            android:text="9:15 AM"
+            android:textColor="#506876"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/complete_job_tv" />
+
+        <TextView
+            android:id="@+id/msg_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Hi sarah! I can do this job for your requir.."
+            android:textColor="#506876"
+            app:layout_constraintBottom_toBottomOf="@+id/time_tv"
+            app:layout_constraintEnd_toStartOf="@+id/time_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/time_tv" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#C3CDD3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/msg_tv" />
+
+        <ImageView
+            android:id="@+id/star_one_iv"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/star_selected" />
+
+        <ImageView
+            android:id="@+id/star_two_iv"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/star_one_iv"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/star_selected" />
+
+        <ImageView
+            android:id="@+id/star_three_iv"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/star_two_iv"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/star_selected" />
+
+        <ImageView
+            android:id="@+id/star_four_iv"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/star_three_iv"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/star_selected" />
+
+        <ImageView
+            android:id="@+id/star_five_iv"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/star_four_iv"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/star_unselected" />
+
+        <TextView
+            android:id="@+id/review_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="20 Reviews  "
+            android:textColor="#2D3A41"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/star_five_iv"
+            app:layout_constraintStart_toEndOf="@+id/star_five_iv"
+            app:layout_constraintTop_toTopOf="@+id/star_five_iv" />
+
+        <TextView
+            android:id="@+id/review_offer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="Review Offer"
+            android:textColor="#F36133"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/review_count_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/review_count_tv" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

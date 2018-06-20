@@ -36,13 +36,19 @@ public class TaskPicPresenter {
 
                 mViewModel.showPicRecyclerview();
                 mViewModel.enableNextButton();
-
+                mViewModel.hidePhotoPickButton();
             }
         });
+
     }
 
     public int countTotalPic() {
+
+        if (mFiles.size()>7)
         return 7;
+        else {
+          return   mFiles.size();
+        }
     }
 
     public Bitmap getPicBitmap(int position) {
@@ -51,11 +57,13 @@ public class TaskPicPresenter {
 
         File file = mFiles.get(position);
 
-        return BitmapFactory.decodeFile(file.getAbsolutePath());
+        BitmapFactory.Options opts = new BitmapFactory.Options();
+        opts.inSampleSize = 8;
+        return BitmapFactory.decodeFile(file.getAbsolutePath(), opts);
     }
 
     public String getPicCount(int position) {
-        return String.valueOf(position + 1);
+        return String.valueOf(position);
     }
 
     public int getPicItemViewType(int position) {
@@ -70,3 +78,4 @@ public class TaskPicPresenter {
         mViewModel.exit();
     }
 }
+

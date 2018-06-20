@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+ <layout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -13,45 +12,338 @@
             android:paddingBottom="37dp"
             tools:context="com.biswajitbanik.Diem.HomeCategory.ViewModel.TaskActivity">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="0dp"
-                android:layout_height="184dp"
-                app:layout_constraintEnd_toEndOf="parent"
+            <ImageView
 
-                app:layout_constraintHorizontal_bias="1.0"
+                android:id="@+id/jobber_iv"
+                android:layout_width="match_parent"
+                android:layout_height="540dp"
+                android:src="@drawable/jober_image"
+                android:scaleType="centerCrop"
+                />
+
+          <View
+              android:id="@+id/view10"
+              android:layout_width="0dp"
+              android:layout_height="64dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintBottom_toBottomOf="@+id/jobber_iv"
+              android:background="#83000000"
+              />
+
+            <TextView
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view10"
+                android:layout_marginTop="10dp"
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-
-
-                </LinearLayout>
-
-
-            </android.support.v7.widget.Toolbar>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earn instantly as a Jobber"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"/>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/info_cv"
                 android:layout_width="330dp"
                 android:layout_height="301dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="212dp">
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/jobber_iv">
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="328dp"
-                    android:layout_height="56dp"
-                    android:text="What could you earn?"
-                    android:textColor="#474747"
-                    android:textSize="25dp" />
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="270dp"
+                        android:layout_height="39dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="What could you earn?"
+                        android:textColor="#474747"
+                        android:textSize="25dp"
+                        app:fontFamily="@font/raleway_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/location_tv"
+                        android:layout_width="66dp"
+                        android:layout_height="19dp"
+                        android:layout_marginLeft="21dp"
+
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Location"
+                        android:textColor="#474747"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/raleway_semibold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <TextView
+                        android:id="@+id/cityname_tv"
+                        android:layout_width="64dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Toronto"
+                        android:textColor="#474747"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/location_tv" />
+
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#6b000000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cityname_tv" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="71dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Job Type  "
+                        android:textColor="#474747"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/raleway_semibold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="76dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="9dp"
+                        android:text="All Types  "
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#6b000000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="146dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="8dp"
+                        android:text="$900 CAD"
+                        android:textColor="@color/bg_screen1"
+                        android:textSize="30sp"
+                        app:fontFamily="@font/lato"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="90dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="9dp"
+                        android:text="weekly potential"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView19"
+                        app:layout_constraintBottom_toBottomOf="@id/textView19"
+                        app:layout_constraintStart_toEndOf="@+id/textView19"
+                        tools:layout_editor_absoluteY="227dp" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="9dp"
+                        android:text="Jobbers earn on average of $22.50 per hour  "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
             </android.support.v7.widget.CardView>
 
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Get paid instantly."
+                android:textColor="@color/black"
+
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_cv" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="324dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="9dp"
 
 
+                android:text="Money is usually transferred within seconds of completing your job to your PayPal account. Diem is growing rapidly, and has steady work in most areas.  "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Work in your own area."
+                android:textColor="@color/black"
+
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView25"
+
+                android:layout_width="310dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+
+
+                android:text="Help your neighbours by doing work around their house, and get paid for it. How good is that?  "
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="#474747"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Be your own boss."
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:fontFamily="@font/raleway_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="310dp"
+                android:layout_height="72dp"
+                android:layout_marginBottom="90dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#474747"
+
+
+                android:text="You choose when to work. Whether it’s for extra cash to pay your bills, or to earn big and move up, you’re the boss."
+                app:layout_constraintBottom_toTopOf="@+id/textView30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="299dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="9dp"
+                android:textColor="#474747"
+
+
+                android:text="There are no extensive fuel costs to be a jobber. There’s no overhead or no wear and tear on your car or property. What you earn, you keep.  "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="No hidden expenses.  "
+
+
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:fontFamily="@font/raleway_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_background"
+                android:text="Get Started"
+
+
+                android:textColor="@color/cardview_light_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+
+
+                android:id="@+id/textView30"
+                android:layout_width="175dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="41dp"
+                android:layout_marginStart="20dp"
+                android:text="You could earn $900 CAD per week"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </android.support.constraint.ConstraintLayout>

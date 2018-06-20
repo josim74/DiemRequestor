@@ -10,4 +10,6 @@ public interface TaskBudgetViewModel {
     void removeErrorMsg();
 
     void setETText(String msg);
+
+    void openSummaryActivity();
 }
